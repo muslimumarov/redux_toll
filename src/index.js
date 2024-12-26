@@ -1,10 +1,13 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client'; // `react-dom/client`ni ishlating
 import App from './App';
-
-const root = ReactDOM.createRoot(document.getElementById('root')); // Yangi createRoot API
+import store from "./configStore";
+import { Provider } from 'react-redux';
+const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <App />
+    <Provider store={store}>
+      <App />
+    </Provider>
   </React.StrictMode>
 );

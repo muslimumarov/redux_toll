@@ -1,28 +1,56 @@
 import React from 'react'
 import "./app.css"
-
+import TodosHeader from './components/todos-header'
+import TodosForm from './components/todos-form'
+import TodosItems from './components/todo-items'
+import TodosFooter from './components/todod-footer'
 const App = () => {
   return (
-  <div className="container">
-      <div className="wrap  border rounded-[30px] mt-10 mx-auto border-black w-[600px] h-[300px]">
-        <div className="p-4 rounded-tl-[30px] rounded-tr-[30px]    bg-slate-300 card-header">
-        <h1 className=''>todos 0</h1>
-        </div>
-        <div className="card-body mb-8">
-
-        </div>
-
-        <ul className="list-group list-group-flush mb-8">
-          <li className="list-group-item border  pb-3">An item</li>
-          <li className="list-group-item border  pb-3">A second  item</li>
-          <li className="list-group-item border pb-3">A third item</li>
-        </ul>    
-        <div className="card-footer">
-          <button className='bg-cyan-600 py-2 px-5 rounded-md'>save</button>
-        </div>
+    <div className="container">
+      <div className="wrap grid border-b-4 border-black  border rounded-[10px] mt-10 mx-auto w-[550px] h-[400px]">
+        <TodosHeader/>
+        <TodosForm/>
+        <TodosItems/>
+        <TodosFooter/>
       </div>
-  </div>
+    </div>
   )
 }
 
 export default App
+
+
+
+
+
+
+
+// import React from 'react'
+// import "./app.css"
+
+// const App = () => {
+//   return (
+//   <div className="container">
+//       <div className="wrap grid  border rounded-[30px] mt-10 mx-auto border-black w-[600px] h-[300px]">
+
+
+//         <ul className="pl-2 list-group list-group-flush  mb-8">
+//           <li className="pl-2 list-group-item flex    pb-3">
+//            <div className="mr-80">
+//            <input className='mr-3' type="checkbox" id="flexCheckDefault"/>
+//             <label htmlFor="flexCheckDefault">
+//               defaul checkbox
+//             </label>
+//            </div>
+//             <button className='px-3 rounded-[10px] py-2 bg-red-700'>Remove</button>
+//           </li>
+//         </ul>
+//         <div className="pl-2 card-footer">
+//           <button className=' bg-cyan-600 py-2 px-5 rounded-md'>save</button>
+//         </div>
+//       </div>
+//   </div>
+//   )
+// }
+
+// export default App
