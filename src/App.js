@@ -7,7 +7,7 @@ import TodosFooter from './components/todod-footer'
 const App = () => {
   return (
     <div className="container">
-      <div className="wrap grid border-b-4 border-black  border rounded-[10px] mt-10 mx-auto w-[550px] h-[400px]">
+      <div className="wrap grid border-b-4 border-black  border rounded-[10px] mt-10 mx-auto w-[550px] h-[300px]">
         <TodosHeader/>
         <TodosForm/>
         <TodosItems/>
