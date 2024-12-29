@@ -7,9 +7,9 @@ const initialState =[
       id: 2,
       text: "by eggs"
    },
-   
-]
 
+
+]
 
 const todos = (state = initialState, action) => {
    return state
