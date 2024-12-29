@@ -18,15 +18,15 @@ const TodosForm = () => {
     formRef.current.reset()
   }
   return (
-    <div className="card-body pl-5 mb-1">
-      <form onSubmit={formSubmit} ref={formRef}>
+    <div className="card-body pl-5 mb-4">
+      <form onSubmit={formSubmit} className=" " ref={formRef}>
         <input
           ref={inputRef}
-          className='border rounded-[5px] inline-block mr-60 border-black px-3  py-1'
+          className='border  rounded-[5px] inline-block mr-[235px] border-black px-3  py-1'
           type="text"
           id="examplfor"
           placeholder='e.g. By eggs' />
-        <button className='bg-green-700  inline-block text-[white] py-1 px-5 rounded-md'>add</button>
+        <button className='bg-green-700 inline-block text-[white] py-1 px-5 rounded-md'>add</button>
       </form>
     </div>
 

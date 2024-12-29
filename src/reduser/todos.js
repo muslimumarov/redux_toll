@@ -1,18 +1,15 @@
-const initialState =[
-   {
-      id: 1,
-      text: "milk"
-   },
-   {
-      id: 2,
-      text: "by eggs"
-   },
-
-
-]
+const initialState =[]
 
 const todos = (state = initialState, action) => {
+  switch(action.type) {
+   case 'ADD_TODO':
+   return[
+     ...state,
+     action.payload
+   ]
+   default:
    return state
+  }
 }
 
 export default todos
