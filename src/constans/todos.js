@@ -1,0 +1,5 @@
+export const TODO = {
+  ADD_TODO: 'ADD_TODO',
+  REMOV: 'REMOV_TOD0',
+  MARK_TODO_DONE: 'MARK_TODO_DONE'
+}

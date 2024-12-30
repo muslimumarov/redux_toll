@@ -1,4 +1,3 @@
-
 const TodosFooter = () => {
   return (
     <div className="pl-2 card-footer">

@@ -1,8 +1,10 @@
+import { TODO } from "../constans/todos"
+
 const initialState =[]
 
 const todos = (state = initialState, action) => {
   switch(action.type) {
-   case 'ADD_TODO':
+   case TODO.ADD_TODO:
    return[
      ...state,
      action.payload
