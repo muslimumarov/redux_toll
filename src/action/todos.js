@@ -9,11 +9,18 @@ export  const addTodo = (todoitem) => {
   }
 }
 export const removTodo = (id) => {
-  console.log(id);
   return {
     type: TODO.REMOV,
     payload: {
       id
     }
   }
+}
+  export const markDone = (todoitem) => {
+    return {
+      type: TODO.MARK_TODO_DONE,
+      payload: {
+        ...todoitem
+      }
+    }
 }
