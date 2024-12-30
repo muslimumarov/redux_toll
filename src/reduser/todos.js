@@ -22,6 +22,8 @@ const todos = (state = initialState, action) => {
                return item
             }
          })
+         case TODO.INIT:
+            return action.payload
       default:
          return state
    }

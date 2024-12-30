@@ -1,19 +1,25 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import "./app.css"
 import TodosHeader from './components/todos-header'
 import TodosForm from './components/todos-form'
 import TodosItems from './components/todo-items'
 import TodosFooter from './components/todod-footer'
-import { useSelector } from 'react-redux'
+import { useDispatch, useSelector } from 'react-redux'
+import { initial } from './action/todos'
 const App = () => {
   const itemSelect = useSelector(state => state.todos)
+  const dispatch = useDispatch()
+  useEffect(() => {
+    const todos = JSON.parse(localStorage.getItem('todos'))
+    dispatch(initial(todos))
+  }, [])
   return (
     <div className="container">
       <div className="wrap  border-b-4 border-black  border rounded-[10px] mt-10 mx-auto w-[550px] h-[400px]">
-        <TodosHeader length={itemSelect.length}/>
-        <TodosForm/>
-        <TodosItems/>
-        <TodosFooter/>
+        <TodosHeader length={itemSelect.length} />
+        <TodosForm />
+        <TodosItems />
+        <TodosFooter />
       </div>
     </div>
   )
