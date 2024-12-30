@@ -1,7 +1,7 @@
 import { useDispatch } from "react-redux"
 import { markDone, removTodo } from "../action/todos"
 
-const TodosItem = ({ id, title }) => {
+const TodosItem = ({ id, title, isDone }) => {
   const dispatch = useDispatch()
   const handleChange = (e) => {
     dispatch(markDone(
@@ -16,7 +16,7 @@ const TodosItem = ({ id, title }) => {
     <li className="pl-2 pr-3 mb-2 border border-black items-center list-group-item justify-between  flex ">
       <div className="">
         <input className='mr-3 ' type="checkbox" id="flexCheckDefault" onChange={handleChange} />
-        <label className="text-black " htmlFor="flexCheckDefault">
+        <label className={`text-black  ${ isDone ? 'line-through' : '' }`} htmlFor="flexCheckDefault">
           {title}
         </label>
       </div>
